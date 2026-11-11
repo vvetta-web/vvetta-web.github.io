@@ -94,7 +94,7 @@ button{font-family:var(--sans);cursor:pointer}
   line-height:1.5;max-width:210px;
 }
 .note b{display:block;font-weight:700}
-.note .dash{width:36px;height:2px;background:var(--red);margin:8px 0}
+.note .dash{display:block;width:36px;height:2px;background:var(--red);margin:8px 0}
 .note-red{color:var(--red)}
 .note-1{position:absolute;top:340px;right:24px}
 .hero-row{display:flex;gap:56px;align-items:flex-end;margin-top:56px;flex-wrap:wrap}
@@ -218,6 +218,16 @@ button{font-family:var(--sans);cursor:pointer}
 .c-block p{font-size:15px;margin-bottom:8px}
 .c-block a{border-bottom:1.5px solid var(--red);transition:background .15s ease-out,color .15s ease-out}
 .c-block a:hover{background:var(--red);color:var(--paper)}
+.msg-row{display:flex;gap:10px;flex-wrap:wrap}
+.c-block a.msg-btn{
+  border-bottom:none;
+  display:inline-block;
+  font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;
+  border:1px solid var(--ink);
+  padding:10px 18px;
+  transition:background .15s ease-out,color .15s ease-out,border-color .15s ease-out;
+}
+.c-block a.msg-btn:hover{background:var(--red);border-color:var(--red);color:var(--paper)}
 .map{position:relative;border:1px solid var(--line);height:100%;min-height:340px;overflow:hidden;
   background:
     repeating-linear-gradient(0deg,transparent 0 39px,var(--hair) 39px 40px),
@@ -242,11 +252,11 @@ button{font-family:var(--sans);cursor:pointer}
 .rule span{font-size:14px;line-height:1.5}
 
 /* footer */
-.footer{background:var(--ink);color:var(--paper);padding:80px 24px 32px}
+.footer{background:var(--ink);color:var(--paper);padding:80px 24px 32px;min-height:509px}
 .footer-inner{max-width:1280px;margin:0 auto}
 .footer-big{
   font-family:var(--serif);
-  font-size:clamp(56px,11vw,170px);
+  font-size:clamp(44px,7vw,96px);
   line-height:.9;letter-spacing:-.015em;
 }
 .footer-big em{color:var(--red)}
@@ -279,6 +289,7 @@ button{font-family:var(--sans);cursor:pointer}
   .about-side{grid-template-columns:1fr;gap:24px}
   .contact-wrap{grid-template-columns:1fr}
   .rules{grid-template-columns:1fr}
+  .footer{min-height:0}
 }
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
@@ -338,9 +349,11 @@ button{font-family:var(--sans);cursor:pointer}
             <span>Выбирай вкус,<br>а не размер стакана</span>
           </div>
           <div class="note">
-            <b>Меньше сахара — больше вкуса.</b>
-            <span class="dash"></span>
-            Меньше шума — больше жизни.
+            <span>
+              <b>Меньше сахара — больше вкуса.</b>
+              <span class="dash"></span>
+              Меньше шума — больше жизни.
+            </span>
           </div>
         </div>
       </div>
@@ -475,6 +488,14 @@ button{font-family:var(--sans);cursor:pointer}
           <h3>Связь</h3>
           <p><a href="tel:+74950001313">+7 495 000-13-13</a><br>
           <a href="mailto:zdarova@kofebeton.ru">zdarova@kofebeton.ru</a></p>
+        </div>
+        <div class="c-block" style="margin-top:28px">
+          <h3>Мессенджеры</h3>
+          <p class="msg-row">
+            <a class="msg-btn" href="https://t.me/kofebeton" target="_blank" rel="noopener noreferrer">Telegram</a>
+            <a class="msg-btn" href="https://wa.me/74950001313" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+            <a class="msg-btn" href="https://vk.com/kofebeton" target="_blank" rel="noopener noreferrer">VK</a>
+          </p>
         </div>
       </div>
       <div class="map" role="img" aria-label="Схематичная карта: Мясницкая улица, 13 — вход со двора">
