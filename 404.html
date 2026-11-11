@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; base-uri 'self'; form-action 'none'">
+<title>404 — КОФЕ & БЕТОН</title>
+<meta name="description" content="Страница не найдена. Зато кофе на месте — КОФЕ & БЕТОН, Москва, Мясницкая 13.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' fill='%23e3361f'/%3E%3Cpath d='M12 3l1.8 7.2L21 12l-7.2 1.8L12 21l-1.8-7.2L3 12l7.2-1.8z' fill='%23f4f1ea'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#f4f1ea;
+  --ink:#141310;
+  --red:#e3361f;
+  --line:rgba(20,19,16,.9);
+  --serif:"Instrument Serif",Georgia,serif;
+  --sans:"Space Grotesk",Arial,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+  font-family:var(--sans);
+  font-size:16px;line-height:1.55;
+  color:var(--ink);
+  background:var(--paper);
+  -webkit-font-smoothing:antialiased;
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:2px solid var(--red);outline-offset:2px}
+
+.topbar{
+  display:flex;align-items:center;justify-content:space-between;gap:16px;
+  border-bottom:1px solid var(--line);
+  padding:10px 20px;
+  font-size:12px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;
+}
+.brand{display:flex;align-items:center;gap:10px;font-weight:700}
+.brand svg{flex:none}
+.coords{color:var(--red)}
+
+.wrap{
+  flex:1;width:100%;max-width:1280px;margin:0 auto;
+  padding:96px 24px;
+  display:flex;flex-direction:column;justify-content:center;
+}
+.kicker{
+  font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--red);margin-bottom:16px;
+}
+h1{
+  font-family:var(--serif);font-weight:400;
+  font-size:clamp(52px,9vw,130px);
+  line-height:.92;letter-spacing:-.015em;
+  margin-bottom:24px;
+}
+h1 em{color:var(--red)}
+.lead{font-size:15px;max-width:52ch;opacity:.8;margin-bottom:36px}
+.msg-row{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:40px}
+.msg-btn{
+  display:inline-block;
+  font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;
+  border:1px solid var(--ink);
+  padding:10px 18px;
+  transition:background .15s ease-out,color .15s ease-out,border-color .15s ease-out;
+}
+.msg-btn:hover{background:var(--red);border-color:var(--red);color:var(--paper)}
+.home-btn{
+  align-self:flex-start;
+  display:inline-block;
+  font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;
+  background:var(--ink);color:var(--paper);
+  padding:14px 26px;
+  transition:background .15s ease-out;
+}
+.home-btn:hover{background:var(--red)}
+
+.mini{
+  border-top:1px solid var(--line);
+  padding:14px 20px;
+  display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;
+  font-size:11px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;
+}
+.mini a{border-bottom:1.5px solid var(--red)}
+.mini a:hover{color:var(--red)}
+
+@media (max-width:900px){
+  .coords{display:none}
+  .wrap{padding:64px 20px}
+}
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <a class="brand" href="/">
+    <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 1l2.6 8.4L23 12l-8.4 2.6L12 23l-2.6-8.4L1 12l8.4-2.6z" fill="#e3361f"/></svg>
+    КОФЕ&amp;БЕТОН
+  </a>
+  <span class="coords">55.7558&deg; N, 37.6173&deg; E — МОСКВА</span>
+</header>
+
+<main class="wrap">
+  <p class="kicker">Ошибка 404</p>
+  <h1>Страница <em>не найдена.</em></h1>
+  <p class="lead">Зато кофе на месте. Мы на Мясницкой, 13, стр. 2 — каждый день с 8:00. А если хотите что-то спросить, напишите нам в мессенджеры:</p>
+  <p class="msg-row">
+    <a class="msg-btn" href="https://t.me/kofebeton" target="_blank" rel="noopener noreferrer">Telegram</a>
+    <a class="msg-btn" href="https://wa.me/74950001313" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+    <a class="msg-btn" href="https://vk.com/kofebeton" target="_blank" rel="noopener noreferrer">VK</a>
+  </p>
+  <a class="home-btn" href="/">&larr; На главную</a>
+</main>
+
+<footer class="mini">
+  <span>&copy; 2026 КОФЕ&amp;БЕТОН</span>
+  <a href="mailto:zdarova@kofebeton.ru">zdarova@kofebeton.ru</a>
+</footer>
+
+</body>
+</html>
