@@ -1,0 +1,539 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; base-uri 'self'; form-action 'none'">
+<title>КОФЕ & БЕТОН — кофейня в Москве</title>
+<meta name="description" content="КОФЕ & БЕТОН — кофейня в Москве. Пей меньше, чувствуй больше. Эспрессо, фильтр, бетонный интерьер. Открыто ежедневно с 8:00.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' fill='%23e3361f'/%3E%3Cpath d='M12 3l1.8 7.2L21 12l-7.2 1.8L12 21l-1.8-7.2L3 12l7.2-1.8z' fill='%23f4f1ea'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#f4f1ea;
+  --ink:#141310;
+  --red:#e3361f;
+  --line:rgba(20,19,16,.9);
+  --hair:rgba(20,19,16,.25);
+  --serif:"Instrument Serif",Georgia,serif;
+  --sans:"Space Grotesk",Arial,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:var(--sans);
+  font-size:16px;line-height:1.55;
+  color:var(--ink);
+  background:var(--paper);
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:2px solid var(--red);outline-offset:2px}
+button{font-family:var(--sans);cursor:pointer}
+
+/* ---------- top bar ---------- */
+.topbar{
+  position:sticky;top:0;z-index:50;
+  display:flex;align-items:center;justify-content:space-between;gap:16px;
+  background:var(--paper);
+  border-bottom:1px solid var(--line);
+  padding:10px 20px;
+  font-size:12px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;
+}
+.topbar .tb-left{display:flex;align-items:center;gap:14px}
+.topbar .arr{font-size:16px;line-height:1;transition:transform .15s ease-out}
+.topbar a.tb-brand:hover .arr{transform:translateX(-4px)}
+.tb-brand{font-weight:700}
+.tb-coords{color:var(--red)}
+.nav{display:flex;align-items:center;gap:2px}
+.nav a{
+  padding:6px 12px;
+  font-size:12px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;
+  border-bottom:2px solid transparent;
+  transition:border-color .15s ease-out,color .15s ease-out;
+}
+.nav a:hover{border-bottom-color:var(--red);color:var(--red)}
+.nav a.nav-cta{background:var(--ink);color:var(--paper);margin-left:10px}
+.nav a.nav-cta:hover{background:var(--red);color:var(--paper);border-bottom-color:transparent}
+.burger{display:none;background:none;border:1px solid var(--line);padding:6px 12px;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
+.burger:hover{background:var(--red);color:var(--paper);border-color:var(--red)}
+
+/* ---------- poster hero ---------- */
+.hero{
+  position:relative;
+  border-bottom:1px solid var(--line);
+  background:
+    repeating-linear-gradient(90deg,transparent 0 calc(25% - 1px),var(--hair) calc(25% - 1px) 25%),
+    var(--paper);
+}
+.hero-inner{position:relative;max-width:1280px;margin:0 auto;padding:72px 24px 96px}
+.hero-index{
+  display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;
+  font-size:11px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;
+  margin-bottom:8px;
+}
+.hero-index .idx-num{font-weight:700}
+.hero-index .idx-red{color:var(--red)}
+.hero h1{
+  font-family:var(--serif);
+  font-weight:400;
+  font-size:clamp(64px,13.5vw,190px);
+  line-height:.88;
+  letter-spacing:-.015em;
+  position:relative;z-index:2;
+}
+.hero h1 .l2{display:block;margin-left:8vw}
+.hero h1 .l3{display:block;font-style:italic;margin-left:2vw}
+.hero h1 .l3 em{color:var(--red)}
+.note{
+  font-size:12px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;
+  line-height:1.5;max-width:210px;
+}
+.note b{display:block;font-weight:700}
+.note .dash{width:36px;height:2px;background:var(--red);margin:8px 0}
+.note-red{color:var(--red)}
+.note-1{position:absolute;top:340px;right:24px}
+.hero-row{display:flex;gap:56px;align-items:flex-end;margin-top:56px;flex-wrap:wrap}
+.hero-notes{display:flex;flex-direction:column;gap:26px;padding-bottom:6px}
+.hero-notes .note{display:flex;gap:10px;align-items:flex-start;max-width:none}
+.hero-notes .note svg{flex:none;margin-top:2px}
+.hero-photo{
+  position:static;flex:none;
+  width:300px;
+  border:1px solid var(--line);
+}
+.hero-photo .ph-frame{position:relative;overflow:hidden}
+.hero-photo img{width:100%;height:100%;object-fit:cover;aspect-ratio:4/5;filter:grayscale(1) contrast(1.1)}
+.hero-photo .tint{position:absolute;inset:0;background:var(--red);mix-blend-mode:multiply}
+.hero-photo figcaption{
+  position:absolute;left:0;bottom:0;background:var(--paper);
+  border-top:1px solid var(--line);border-right:1px solid var(--line);
+  font-size:10px;font-weight:700;letter-spacing:.14em;padding:4px 10px;
+}
+.cropmark{position:absolute;width:18px;height:18px;border:0 dashed var(--ink);opacity:.7;z-index:3}
+.cropmark.tl{top:12px;left:12px;border-top-width:1.5px;border-left-width:1.5px}
+.cropmark.br{bottom:12px;right:12px;border-bottom-width:1.5px;border-right-width:1.5px}
+.barcode{
+  position:absolute;right:24px;bottom:24px;
+  width:120px;height:34px;
+  background:repeating-linear-gradient(90deg,var(--ink) 0 2px,transparent 2px 5px,var(--ink) 5px 8px,transparent 8px 10px,var(--ink) 10px 11px,transparent 11px 14px);
+  z-index:3;
+}
+.barcode::after{
+  content:"55.7558 N / 37.6173 E";
+  position:absolute;top:100%;left:0;margin-top:4px;
+  font-size:9px;font-weight:700;letter-spacing:.12em;white-space:nowrap;
+}
+
+/* ---------- ticker ---------- */
+.ticker{border-bottom:1px solid var(--line);overflow:hidden;white-space:nowrap}
+.ticker-track{display:inline-flex;align-items:center;padding:12px 0;animation:ticker 26s linear infinite}
+.ticker:hover .ticker-track{animation-play-state:paused}
+.ticker-track span{
+  font-family:var(--serif);font-size:20px;letter-spacing:.02em;
+  padding:0 26px;text-transform:uppercase;
+}
+.ticker-track .dot{color:var(--red);font-family:var(--sans);font-size:14px;padding:0}
+@keyframes ticker{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* ---------- sections ---------- */
+.section{border-bottom:1px solid var(--line)}
+.section-head{
+  display:flex;align-items:baseline;justify-content:space-between;gap:16px;flex-wrap:wrap;
+  max-width:1280px;margin:0 auto;padding:64px 24px 36px;
+}
+.section-title{
+  font-family:var(--serif);
+  font-size:clamp(44px,7vw,96px);
+  line-height:.9;letter-spacing:-.01em;
+}
+.section-title em{color:var(--red)}
+.section-meta{font-size:11px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;text-align:right}
+.section-meta b{display:block;font-weight:700;color:var(--red)}
+
+/* menu — editorial hairline list */
+.menu-list{max-width:1280px;margin:0 auto;padding:0 24px 72px}
+.menu-item{
+  display:grid;grid-template-columns:56px 1fr auto;align-items:baseline;gap:24px;
+  padding:20px 0;border-top:1px solid var(--hair);
+  transition:background .15s ease-out;
+}
+.menu-item:last-child{border-bottom:1px solid var(--hair)}
+.menu-item:hover{background:rgba(227,54,31,.06)}
+.menu-item .m-num{font-size:11px;font-weight:700;letter-spacing:.14em;color:var(--red)}
+.menu-item .m-name{font-family:var(--serif);font-size:clamp(24px,3.2vw,40px);line-height:1;display:block;transition:transform .15s ease-out}
+.menu-item:hover .m-name{transform:translateX(10px)}
+.menu-item .m-desc{font-size:12px;font-weight:500;letter-spacing:.05em;text-transform:uppercase;opacity:.65;display:block;margin-top:6px}
+.menu-item .m-price{font-family:var(--serif);font-size:clamp(22px,2.6vw,32px);white-space:nowrap}
+.menu-item .m-price sup{font-family:var(--sans);font-size:11px;font-weight:700;letter-spacing:.1em}
+
+/* gallery — poster photo grid */
+.gallery-grid{
+  max-width:1280px;margin:0 auto;padding:0 24px 72px;
+  display:grid;grid-template-columns:repeat(12,1fr);gap:20px;
+}
+.g-fig{position:relative;border:1px solid var(--line);overflow:hidden}
+.g-fig img{width:100%;height:100%;object-fit:cover;transition:transform .3s ease-out}
+.g-fig:hover img{transform:scale(1.04)}
+.g-fig figcaption{
+  position:absolute;left:0;bottom:0;background:var(--paper);
+  border-top:1px solid var(--line);border-right:1px solid var(--line);
+  font-size:10px;font-weight:700;letter-spacing:.14em;padding:5px 12px;
+}
+.g-fig figcaption i{color:var(--red);font-style:normal;margin-right:8px}
+.g1{grid-column:1/8;aspect-ratio:16/10}
+.g2{grid-column:8/13;aspect-ratio:4/5}
+.g3{grid-column:1/6;aspect-ratio:1/1}
+.g4{grid-column:6/13;aspect-ratio:16/9}
+.g-fig .tint{position:absolute;inset:0;background:var(--red);mix-blend-mode:multiply;pointer-events:none}
+
+/* about */
+.about-wrap{max-width:1280px;margin:0 auto;padding:0 24px 72px;display:grid;grid-template-columns:1fr;gap:40px}
+.about-quote{
+  font-family:var(--serif);
+  font-size:clamp(28px,4.4vw,58px);
+  line-height:1.08;letter-spacing:-.01em;
+  max-width:22ch;
+}
+.about-quote em{color:var(--red)}
+.about-side{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:20px;
+  border-top:1px solid var(--hair);padding-top:24px;
+}
+.a-fact .n{font-family:var(--serif);font-size:clamp(34px,4vw,56px);line-height:1;display:block}
+.a-fact .n i{color:var(--red);font-style:normal}
+.a-fact .t{font-size:11px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;opacity:.7;display:block;margin-top:8px}
+
+/* contacts */
+.contact-wrap{max-width:1280px;margin:0 auto;padding:0 24px 72px;display:grid;grid-template-columns:1.1fr 1fr;gap:40px}
+.c-block{border-top:2px solid var(--ink);padding-top:16px}
+.c-block h3{
+  font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--red);margin-bottom:14px;
+}
+.c-block p{font-size:15px;margin-bottom:8px}
+.c-block a{border-bottom:1.5px solid var(--red);transition:background .15s ease-out,color .15s ease-out}
+.c-block a:hover{background:var(--red);color:var(--paper)}
+.map{position:relative;border:1px solid var(--line);height:100%;min-height:340px;overflow:hidden;
+  background:
+    repeating-linear-gradient(0deg,transparent 0 39px,var(--hair) 39px 40px),
+    repeating-linear-gradient(90deg,transparent 0 39px,var(--hair) 39px 40px),
+    var(--paper);
+}
+.map-road{position:absolute;background:var(--ink)}
+.map-road.h{left:0;right:0;height:2px;top:62%}
+.map-road.v{top:0;bottom:0;width:2px;left:38%}
+.map-label{position:absolute;font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;background:var(--paper);border:1px solid var(--line);padding:3px 8px}
+.map-pin{position:absolute;top:62%;left:38%;transform:translate(-50%,-100%);display:flex;flex-direction:column;align-items:center}
+.map-pin span{
+  font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;
+  background:var(--red);color:var(--paper);padding:3px 10px;margin-top:4px;white-space:nowrap;
+}
+
+/* rules */
+.rules{max-width:1280px;margin:0 auto;padding:0 24px 72px;display:grid;grid-template-columns:repeat(3,1fr);gap:0}
+.rule{border-top:1px solid var(--hair);border-left:1px solid var(--hair);padding:22px 24px;transition:background .15s ease-out}
+.rule:hover{background:rgba(227,54,31,.07)}
+.rule b{font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--red);display:block;margin-bottom:8px}
+.rule span{font-size:14px;line-height:1.5}
+
+/* footer */
+.footer{background:var(--ink);color:var(--paper);padding:80px 24px 32px}
+.footer-inner{max-width:1280px;margin:0 auto}
+.footer-big{
+  font-family:var(--serif);
+  font-size:clamp(56px,11vw,170px);
+  line-height:.9;letter-spacing:-.015em;
+}
+.footer-big em{color:var(--red)}
+.footer-row{
+  display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap;
+  margin-top:56px;padding-top:20px;border-top:1px solid rgba(244,241,234,.3);
+  font-size:11px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;
+}
+.footer-row a{border-bottom:1.5px solid var(--red);transition:color .15s ease-out}
+.footer-row a:hover{color:var(--red)}
+
+/* ---------- mobile ---------- */
+@media (max-width:900px){
+  .tb-coords{display:none}
+  .nav{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;background:var(--paper);border-bottom:1px solid var(--line);padding:8px 0}
+  .nav.open{display:flex}
+  .nav a{padding:12px 20px}
+  .nav a.nav-cta{margin:8px 20px 4px}
+  .burger{display:block}
+  .hero-inner{padding:48px 20px 72px}
+  .hero h1 .l2{margin-left:4vw}
+  .note-1{position:static;max-width:none;margin:28px 0 0}
+  .hero-row{margin-top:36px;gap:28px}
+  .hero-photo{width:100%}
+  .barcode{display:none}
+  .g1{grid-column:1/13}
+  .g2{grid-column:1/13;aspect-ratio:4/5}
+  .g3{grid-column:1/13;aspect-ratio:4/3}
+  .g4{grid-column:1/13;aspect-ratio:4/3}
+  .about-side{grid-template-columns:1fr;gap:24px}
+  .contact-wrap{grid-template-columns:1fr}
+  .rules{grid-template-columns:1fr}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .ticker-track{animation:none}
+  *{transition:none!important}
+}
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="tb-left">
+    <button class="burger" id="burger" aria-expanded="false" aria-controls="nav">Меню &#9776;</button>
+    <a class="tb-brand" href="#top"><span class="arr">&#8592;</span> КОФЕ&amp;БЕТОН</a>
+  </div>
+  <span class="tb-coords">55.7558&deg; N, 37.6173&deg; E — МОСКВА</span>
+  <nav class="nav" id="nav" aria-label="Основная навигация">
+    <a href="#menu">Меню</a>
+    <a href="#gallery">Интерьер</a>
+    <a href="#about">О нас</a>
+    <a href="#contacts">Контакты</a>
+    <a class="nav-cta" href="#rules">Правила дома</a>
+  </nav>
+</header>
+
+<main id="top">
+
+  <!-- POSTER HERO -->
+  <section class="hero">
+    <span class="cropmark tl" aria-hidden="true"></span>
+    <span class="cropmark br" aria-hidden="true"></span>
+    <div class="hero-inner">
+      <div class="hero-index">
+        <span class="idx-num">001</span>
+        <span class="idx-red">Кофейня про вкус, а не про объём</span>
+        <span>Ежедневно 8:00–22:00</span>
+      </div>
+      <h1>
+        Пей меньше.
+        <span class="l2">Чувствуй</span>
+        <span class="l3"><em>больше.</em></span>
+      </h1>
+      <div class="note note-1 note-red">
+        <b>Тихий бунт против растворимого кофе и латте-арта.</b>
+      </div>
+      <div class="hero-row">
+        <figure class="hero-photo">
+          <div class="ph-frame">
+            <img src="images/cups.jpg" alt="Два фирменных стакана кислотно-жёлтого цвета со звездой на бетонной стойке" loading="lazy">
+            <span class="tint" aria-hidden="true"></span>
+          </div>
+          <figcaption>ФИРМЕННЫЙ СТАКАН</figcaption>
+        </figure>
+        <div class="hero-notes">
+          <div class="note">
+            <svg width="34" height="34" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20L20 4M20 4h-9M20 4v9" stroke="#e3361f" stroke-width="2.4" fill="none"/></svg>
+            <span>Выбирай вкус,<br>а не размер стакана</span>
+          </div>
+          <div class="note">
+            <b>Меньше сахара — больше вкуса.</b>
+            <span class="dash"></span>
+            Меньше шума — больше жизни.
+          </div>
+        </div>
+      </div>
+      <div class="barcode" aria-hidden="true"></div>
+    </div>
+  </section>
+
+  <!-- TICKER -->
+  <div class="ticker" aria-hidden="true">
+    <div class="ticker-track" id="ticker-track">
+      <span>Эспрессо 150&#8381;</span><span class="dot">&#10038;</span>
+      <span>Своя обжарка</span><span class="dot">&#10038;</span>
+      <span>Фильтр бездонный 250&#8381;</span><span class="dot">&#10038;</span>
+      <span>Без декафа</span><span class="dot">&#10038;</span>
+      <span>Розетки у окна</span><span class="dot">&#10038;</span>
+    </div>
+  </div>
+
+  <!-- MENU -->
+  <section class="section" id="menu">
+    <div class="section-head">
+      <h2 class="section-title">Меню <em>/</em> меньше, да лучше</h2>
+      <div class="section-meta"><b>008 позиций</b>цены в рублях, без наценок</div>
+    </div>
+    <div class="menu-list">
+      <div class="menu-item">
+        <span class="m-num">01</span>
+        <span><span class="m-name">Эспрессо</span><span class="m-desc">Двойной шот, свежая обжарка</span></span>
+        <span class="m-price">150<sup>&#8381;</sup></span>
+      </div>
+      <div class="menu-item">
+        <span class="m-num">02</span>
+        <span><span class="m-name">Американо</span><span class="m-desc">Эспрессо + горячая вода</span></span>
+        <span class="m-price">190<sup>&#8381;</sup></span>
+      </div>
+      <div class="menu-item">
+        <span class="m-num">03</span>
+        <span><span class="m-name">Фильтр бездонный</span><span class="m-desc">Эфиопия, ягоды и цветы</span></span>
+        <span class="m-price">250<sup>&#8381;</sup></span>
+      </div>
+      <div class="menu-item">
+        <span class="m-num">04</span>
+        <span><span class="m-name">Капучино</span><span class="m-desc">250 мл, молоко цельное</span></span>
+        <span class="m-price">260<sup>&#8381;</sup></span>
+      </div>
+      <div class="menu-item">
+        <span class="m-num">05</span>
+        <span><span class="m-name">Раф &laquo;Бетон&raquo;</span><span class="m-desc">Солёная карамель, двойной шот</span></span>
+        <span class="m-price">320<sup>&#8381;</sup></span>
+      </div>
+      <div class="menu-item">
+        <span class="m-num">06</span>
+        <span><span class="m-name">Какао 70%</span><span class="m-desc">Для тех, кто не кофейный</span></span>
+        <span class="m-price">280<sup>&#8381;</sup></span>
+      </div>
+      <div class="menu-item">
+        <span class="m-num">07</span>
+        <span><span class="m-name">Чизкейк на углях</span><span class="m-desc">Выдержанный, сожжённый сверху</span></span>
+        <span class="m-price">340<sup>&#8381;</sup></span>
+      </div>
+      <div class="menu-item">
+        <span class="m-num">08</span>
+        <span><span class="m-name">Булка с корицей</span><span class="m-desc">Печём сами, к четвергам не доживает</span></span>
+        <span class="m-price">220<sup>&#8381;</sup></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section class="section" id="gallery">
+    <div class="section-head">
+      <h2 class="section-title">Интерьер <em>/</em> снято на месте</h2>
+      <div class="section-meta"><b>004 кадра</b>без фильтров и постановки</div>
+    </div>
+    <div class="gallery-grid">
+      <figure class="g-fig g1">
+        <img src="images/interior.jpg" alt="Зал кофейни: сырой бетон, трубы под потолком, чёрные стулья и жёлтая дверь" loading="lazy">
+        <figcaption><i>01</i>ЗАЛ</figcaption>
+      </figure>
+      <figure class="g-fig g2">
+        <img src="images/cups.jpg" alt="Два фирменных стакана кислотно-жёлтого цвета со звездой на бетонной стойке" loading="lazy">
+        <figcaption><i>02</i>СТАКАНЫ С СОБОЙ</figcaption>
+      </figure>
+      <figure class="g-fig g3">
+        <img src="images/barista.jpg" alt="Бариста в чёрном фартуке готовит эспрессо за бетонной стойкой" loading="lazy">
+        <span class="tint" aria-hidden="true"></span>
+        <figcaption><i>03</i>БАР</figcaption>
+      </figure>
+      <figure class="g-fig g4">
+        <img src="images/pastry-v2.jpg" alt="Булка с корицей и чизкейк на чёрных тарелках рядом с жёлтым стаканом" loading="lazy">
+        <figcaption><i>04</i>ВИТРИНА</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="section" id="about">
+    <div class="section-head">
+      <h2 class="section-title">О нас <em>/</em> манифест</h2>
+      <div class="section-meta"><b>С 2019 года</b>в бывшем КПЗ</div>
+    </div>
+    <div class="about-wrap">
+      <p class="about-quote">
+        Мы убрали всё лишнее: обои, пледы, меню из досок. Остались бетон, свет и кофе.
+        Лучший дизайн — это <em>отсутствие дизайна.</em>
+      </p>
+      <div class="about-side">
+        <div class="a-fact"><span class="n">4 <i>тонны</i></span><span class="t">кофе обжариваем в год</span></div>
+        <div class="a-fact"><span class="n">0 <i>декафа</i></span><span class="t">и растительного молока*</span></div>
+        <div class="a-fact"><span class="n">1 <i>зал</i></span><span class="t">без зон, уютных уголков и перегородок</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACTS -->
+  <section class="section" id="contacts">
+    <div class="section-head">
+      <h2 class="section-title">Контакты</h2>
+      <div class="section-meta"><b>Метро Китай-Город</b>вход со двора, жёлтая дверь</div>
+    </div>
+    <div class="contact-wrap">
+      <div>
+        <div class="c-block">
+          <h3>Адрес</h3>
+          <p>Москва, Мясницкая ул., 13, стр. 2</p>
+        </div>
+        <div class="c-block" style="margin-top:28px">
+          <h3>Часы работы</h3>
+          <p>пн–пт 8:00–22:00<br>сб–вс 10:00–22:00</p>
+        </div>
+        <div class="c-block" style="margin-top:28px">
+          <h3>Связь</h3>
+          <p><a href="tel:+74950001313">+7 495 000-13-13</a><br>
+          <a href="mailto:zdarova@kofebeton.ru">zdarova@kofebeton.ru</a></p>
+        </div>
+      </div>
+      <div class="map" role="img" aria-label="Схематичная карта: Мясницкая улица, 13 — вход со двора">
+        <div class="map-road h"></div>
+        <div class="map-road v"></div>
+        <span class="map-label" style="top:12px;left:12px">МЯСНИЦКАЯ УЛ.</span>
+        <span class="map-label" style="bottom:12px;right:12px">ДВОР</span>
+        <div class="map-pin">
+          <svg width="26" height="26" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M12 0l2.6 9.4L24 12l-9.4 2.6L12 24l-2.6-9.4L0 12l9.4-2.6z" fill="#e3361f"/>
+          </svg>
+          <span>МЫ ТУТ</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RULES -->
+  <section class="section" id="rules">
+    <div class="section-head">
+      <h2 class="section-title">Правила <em>дома</em></h2>
+      <div class="section-meta"><b>Что ещё знать</b>перед визитом</div>
+    </div>
+    <div class="rules">
+      <div class="rule"><b>Wi-Fi</b><span>Сеть KOFE.BETON, пароль — «espresso». Скорость средняя, как и задумано.</span></div>
+      <div class="rule"><b>Оплата</b><span>Карта, наличные, СБП. Чаевые — наличными в банку на баре.</span></div>
+      <div class="rule"><b>Ноутбуки</b><span>Можно. Розетки — у окна и у колонны, приходите раньше конкурентов.</span></div>
+      <div class="rule"><b>Свой стакан</b><span>Приносите — скидка 20 ₽. Крышку не забудьте, мы про неё тоже забудем.</span></div>
+      <div class="rule"><b>Собаки</b><span>Welcome. У бара всегда стоит миска с водой.</span></div>
+      <div class="rule"><b>Столики</b><span>Не бронируем. Занято — значит занято, приходите через час.</span></div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-big">Пей кофе.<br><em>Чувствуй больше.</em></div>
+    <div class="footer-row">
+      <span>&copy; 2026 КОФЕ&amp;БЕТОН</span>
+      <span>*на самом деле овсяное есть</span>
+      <a href="#top">Наверх &#8593;</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+var burger=document.getElementById('burger');
+var nav=document.getElementById('nav');
+burger.addEventListener('click',function(){
+  var open=nav.classList.toggle('open');
+  burger.setAttribute('aria-expanded',open?'true':'false');
+});
+nav.addEventListener('click',function(e){
+  if(e.target.tagName==='A'){nav.classList.remove('open');burger.setAttribute('aria-expanded','false');}
+});
+var track=document.getElementById('ticker-track');
+track.innerHTML+=track.innerHTML;
+</script>
+
+</body>
+</html>
