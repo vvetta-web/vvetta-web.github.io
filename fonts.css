@@ -1,0 +1,43 @@
+/* Шрифты КОФЕ & БЕТОН — локальные копии, лицензия SIL OFL */
+@font-face{
+  font-family:'Golos Text';
+  font-style:normal;
+  font-weight:400 700;
+  font-display:swap;
+  src:url('fonts/golos-text-400-normal-cyrillic.woff2') format('woff2');
+}
+@font-face{
+  font-family:'Golos Text';
+  font-style:normal;
+  font-weight:400 700;
+  font-display:swap;
+  src:url('fonts/golos-text-400-normal-latin.woff2') format('woff2');
+}
+@font-face{
+  font-family:'Playfair Display';
+  font-style:italic;
+  font-weight:400;
+  font-display:swap;
+  src:url('fonts/playfair-display-400-italic-cyrillic.woff2') format('woff2');
+}
+@font-face{
+  font-family:'Playfair Display';
+  font-style:italic;
+  font-weight:400;
+  font-display:swap;
+  src:url('fonts/playfair-display-400-italic-latin.woff2') format('woff2');
+}
+@font-face{
+  font-family:'Playfair Display';
+  font-style:normal;
+  font-weight:400;
+  font-display:swap;
+  src:url('fonts/playfair-display-400-normal-cyrillic.woff2') format('woff2');
+}
+@font-face{
+  font-family:'Playfair Display';
+  font-style:normal;
+  font-weight:400;
+  font-display:swap;
+  src:url('fonts/playfair-display-400-normal-latin.woff2') format('woff2');
+}
