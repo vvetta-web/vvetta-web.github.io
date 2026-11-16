@@ -5,15 +5,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data:; object-src 'none'; base-uri 'self'; form-action 'none'; upgrade-insecure-requests">
 <meta name="referrer" content="strict-origin-when-cross-origin">
-<title>КОФЕ & БЕТОН — кофейня в Москве</title>
-<meta name="description" content="КОФЕ & БЕТОН — кофейня в стиле брутализм. Эспрессо, фильтр, молочные и бетонный интерьер. Открыто ежедневно с 8:00.">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' fill='%23d9ff00'/%3E%3Cpath d='M12 3l1.8 7.2L21 12l-7.2 1.8L12 21l-1.8-7.2L3 12l7.2-1.8z'/%3E%3C/svg%3E">
+<title>ДВАВОСЕМЬ — эспрессо-бар в Санкт-Петербурге</title>
+<meta name="description" content="ДВАВОСЕМЬ — эспрессо-бар на Лиговском. Двадцать восемь грамм кофе в каждом дабле, обжарка недельной свежести, длинная стойка вместо диванов. Ежедневно с 9:00.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' fill='%23ff4d00'/%3E%3Cpath d='M12 3l1.8 7.2L21 12l-7.2 1.8L12 21l-1.8-7.2L3 12l7.2-1.8z'/%3E%3C/svg%3E">
 <link href="fonts.css" rel="stylesheet">
 <style>
 :root{
   --ink:#000000;
   --paper:#ffffff;
-  --acid:#d9ff00;
+  --acid:#ff4d00;
   --display:"Montserrat","Arial Black",sans-serif;
   --mono:"IBM Plex Mono","Courier New",monospace;
 }
@@ -366,19 +366,19 @@ button{font-family:var(--mono);cursor:pointer}
 <body>
 
 <header class="header">
-  <a class="brand" href="#top" aria-label="КОФЕ & БЕТОН — наверх">
+  <a class="brand" href="#top" aria-label="ДВАВОСЕМЬ — наверх">
     <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true">
       <path d="M12 0l2.6 9.4L24 12l-9.4 2.6L12 24l-2.6-9.4L0 12l9.4-2.6z" fill="currentColor"/>
     </svg>
-    КОФЕ&БЕТОН
+    ДВАВОСЕМЬ
   </a>
   <button class="burger" id="burger" aria-expanded="false" aria-controls="nav">МЕНЮ &#9776;</button>
   <nav class="nav" id="nav" aria-label="Основная навигация">
     <a href="#menu">МЕНЮ</a>
-    <a href="#gallery">ИНТЕРЬЕР</a>
+    <a href="#gallery">СТОЙКА</a>
     <a href="#about">О НАС</a>
     <a href="#contacts">КОНТАКТЫ</a>
-    <a class="nav-cta" href="#contacts">КАК НАС НАЙТИ</a>
+    <a class="nav-cta" href="#contacts">ГДЕ МЫ</a>
   </nav>
 </header>
 
@@ -387,38 +387,39 @@ button{font-family:var(--mono);cursor:pointer}
   <!-- HERO -->
   <section class="hero">
     <div class="hero-inner">
-      <span class="hero-kicker">МОСКВА · ОТКРЫТО ЕЖЕДНЕВНО 8:00–22:00</span>
+      <span class="hero-kicker">САНКТ-ПЕТЕРБУРГ · ЕЖЕДНЕВНО 9:00–21:00</span>
       <h1>
-        Кофе<span class="row2">&amp;Бетон</span>
+        Двадцать<span class="row2">восемь</span>
       </h1>
       <p class="hero-sub">
-        Кофейня в сыром бетонном пространстве. Никаких подушечек, латте-арта
-        и «уютных уголков». Только кофе, громкая музыка и честные цены.
+        Эспрессо-бар на Лиговском. Двадцать восемь грамм кофе в каждом дабле,
+        обжарка недельной свежести и длинная стойка вместо диванов.
+        Стоишь — пьёшь — идёшь. Или нет.
       </p>
       <div class="hero-actions">
         <a class="btn btn-dark" href="#menu">Смотреть меню
           <svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12h16m0 0l-6-6m6 6l-6 6" stroke="currentColor" stroke-width="3" fill="none"/></svg>
         </a>
-        <a class="btn" href="#contacts">Как нас найти</a>
+        <a class="btn" href="#contacts">Где мы стоим</a>
       </div>
     </div>
     <div class="sticker sticker-hero" aria-hidden="true">
-      <span class="price">150&#8381;</span>
-      <span class="label">ЭСПРЕССО</span>
+      <span class="price">180&#8381;</span>
+      <span class="label">ДАБЛ-ШОТ</span>
     </div>
     <div class="sticker sticker-no" aria-hidden="true">
-      <span class="price" style="font-size:22px">БЕЗ<br>ДЕКАФА</span>
+      <span class="price" style="font-size:22px">ПЬЁМ<br>СТОЯ</span>
     </div>
   </section>
 
   <!-- TICKER -->
   <div class="ticker" aria-hidden="true">
     <div class="ticker-track" id="ticker-track">
-      <span>Открыто с 8:00</span><span class="dot">&#10038;</span>
-      <span>Эспрессо 150&#8381;</span><span class="dot">&#10038;</span>
-      <span>Своя обжарка</span><span class="dot">&#10038;</span>
-      <span>Фильтр бездонный 250&#8381;</span><span class="dot">&#10038;</span>
-      <span>Розетки только у окна</span><span class="dot">&#10038;</span>
+      <span>Открыто с 9:00</span><span class="dot">&#10038;</span>
+      <span>Дабл-шот 180&#8381;</span><span class="dot">&#10038;</span>
+      <span>Обжарка каждый четверг</span><span class="dot">&#10038;</span>
+      <span>Фильтр V60 260&#8381;</span><span class="dot">&#10038;</span>
+      <span>Диванов не завезли</span><span class="dot">&#10038;</span>
     </div>
   </div>
 
@@ -426,51 +427,51 @@ button{font-family:var(--mono);cursor:pointer}
   <section class="section" id="menu">
     <div class="section-head">
       <h2 class="section-title">Меню</h2>
-      <span class="section-note">ЦЕНЫ В РУБЛЯХ · БЕЗ НАЦЕНОК</span>
+      <span class="section-note">ГРАММЫ УКАЗАНЫ ЧЕСТНО</span>
     </div>
-    <div class="menu-table" role="table" aria-label="Меню кофейни">
+    <div class="menu-table" role="table" aria-label="Меню эспрессо-бара">
       <div class="menu-row head" role="row">
         <span class="menu-num">&#8470;</span><span>Название</span><span class="menu-price">Цена</span>
       </div>
       <div class="menu-row" role="row">
         <span class="menu-num">01</span>
-        <span><span class="menu-name">Эспрессо</span><span class="menu-desc">двойной шот, свежая обжарка</span></span>
-        <span class="menu-price">150&#8381;</span>
+        <span><span class="menu-name">Двадцать восемь</span><span class="menu-desc">дабл-эспрессо, 28 г из холдера — наша визитка</span></span>
+        <span class="menu-price">180&#8381;</span>
       </div>
       <div class="menu-row" role="row">
         <span class="menu-num">02</span>
-        <span><span class="menu-name">Американо</span><span class="menu-desc">эспрессо + горячая вода</span></span>
-        <span class="menu-price">190&#8381;</span>
+        <span><span class="menu-name">Американо длинный</span><span class="menu-desc">дабл + горячая вода, 350 мл</span></span>
+        <span class="menu-price">200&#8381;</span>
       </div>
       <div class="menu-row" role="row">
         <span class="menu-num">03</span>
-        <span><span class="menu-name">Фильтр бездонный</span><span class="menu-desc">Эфиопия, ягоды и цветы</span></span>
-        <span class="menu-price">250&#8381;</span>
-      </div>
-      <div class="menu-row" role="row">
-        <span class="menu-num">04</span>
-        <span><span class="menu-name">Капучино</span><span class="menu-desc">250 мл, молоко цельное</span></span>
+        <span><span class="menu-name">Фильтр V60</span><span class="menu-desc">Кения, смородина и грейпфрут</span></span>
         <span class="menu-price">260&#8381;</span>
       </div>
       <div class="menu-row" role="row">
-        <span class="menu-num">05</span>
-        <span><span class="menu-name">Раф «Бетон»</span><span class="menu-desc">солёная карамель, двойной шот</span></span>
-        <span class="menu-price">320&#8381;</span>
+        <span class="menu-num">04</span>
+        <span><span class="menu-name">Капучино</span><span class="menu-desc">250 мл, молоко цельное, без рисунков</span></span>
+        <span class="menu-price">240&#8381;</span>
       </div>
       <div class="menu-row" role="row">
-        <span class="menu-num">06</span>
-        <span><span class="menu-name">Какао 70%</span><span class="menu-desc">для тех, кто не кофейный</span></span>
+        <span class="menu-num">05</span>
+        <span><span class="menu-name">Флэт уайт</span><span class="menu-desc">160 мл, двойной шот, молоко больше не влезет</span></span>
         <span class="menu-price">280&#8381;</span>
       </div>
       <div class="menu-row" role="row">
+        <span class="menu-num">06</span>
+        <span><span class="menu-name">Какао 64%</span><span class="menu-desc">для тех, кто пришёл с теми, кто за кофе</span></span>
+        <span class="menu-price">260&#8381;</span>
+      </div>
+      <div class="menu-row" role="row">
         <span class="menu-num">07</span>
-        <span><span class="menu-name">Чизкейк на углях</span><span class="menu-desc">выдержанный, сожжённый сверху</span></span>
-        <span class="menu-price">340&#8381;</span>
+        <span><span class="menu-name">Тарт с фисташкой</span><span class="menu-desc">витрина, печётся в двух километрах отсюда</span></span>
+        <span class="menu-price">320&#8381;</span>
       </div>
       <div class="menu-row" role="row">
         <span class="menu-num">08</span>
-        <span><span class="menu-name">Булка с корицей</span><span class="menu-desc">печём сами, к четвергам не доживает</span></span>
-        <span class="menu-price">220&#8381;</span>
+        <span><span class="menu-name">Банановый хлеб</span><span class="menu-desc">своя выпечка, к воскресенью не доживает</span></span>
+        <span class="menu-price">180&#8381;</span>
       </div>
     </div>
   </section>
@@ -479,25 +480,26 @@ button{font-family:var(--mono);cursor:pointer}
   <section class="section" id="about">
     <div class="section-head">
       <h2 class="section-title">О нас</h2>
-      <span class="section-note">БЕЗ ИНТЕРЬЕРНОГО ДИЗАЙНЕРА</span>
+      <span class="section-note">БЕЗ ДИЗАЙНЕРА И БЕЗ СМЫСЛА</span>
     </div>
     <div class="about-grid">
       <div class="about-statement">
-        Мы убрали всё лишнее: обои, пледы, меню из досок. Остались бетон,
-        свет и кофе. Лучший дизайн — это отсутствие дизайна.
+        Мы не умеем уютно — и не хотим учиться. Длинная стойка, кофе
+        по двадцать восемь грамм и громкая пластинка. Всё лишнее
+        осталось в прошлой жизни здания.
       </div>
       <div class="about-facts">
         <div class="fact">
-          <b>2019</b>
-          <span>год открытия в бывшем КПЗ</span>
+          <b>2021</b>
+          <span>год открытия в бывшей прачечной</span>
         </div>
         <div class="fact">
-          <b>4 тонны</b>
+          <b>2,5 тонны</b>
           <span>кофе обжариваем в год</span>
         </div>
         <div class="fact">
-          <b>0</b>
-          <span>декафа и растительного молока*</span>
+          <b>12</b>
+          <span>мест у стойки — больше и не нужно</span>
         </div>
       </div>
     </div>
@@ -506,24 +508,24 @@ button{font-family:var(--mono);cursor:pointer}
   <!-- GALLERY -->
   <section class="section" id="gallery">
     <div class="section-head">
-      <h2 class="section-title">Интерьер</h2>
+      <h2 class="section-title">Стойка</h2>
       <span class="section-note">СНЯТО НА МЕСТЕ · БЕЗ ФИЛЬТРОВ</span>
     </div>
     <div class="gallery-grid">
       <figure class="ph ph-wide">
-        <img src="images/interior.jpg" alt="Зал кофейни: сырой бетон, трубы под потолком, чёрные стулья и жёлтая дверь" loading="lazy">
+        <img src="images/hall.jpg" alt="Зал эспрессо-бара: сырой бетон, трубы под потолком, бетонная стойка и оранжевая дверь" loading="lazy">
         <figcaption>01 · ЗАЛ</figcaption>
       </figure>
       <figure class="ph ph-tall">
-        <img src="images/cups.jpg" alt="Два фирменных стакана кислотно-жёлтого цвета со звездой на бетонной стойке" loading="lazy">
-        <figcaption>02 · СТАКАНЫ С СОБОЙ</figcaption>
+        <img src="images/cups-to-go.jpg" alt="Два оранжевых стакана с собой на бетонной стойке" loading="lazy">
+        <figcaption>02 · С СОБОЙ</figcaption>
       </figure>
       <figure class="ph ph-small">
-        <img src="images/barista.jpg" alt="Бариста в чёрном фартуке готовит эспрессо за бетонной стойкой" loading="lazy">
+        <img src="images/bar.jpg" alt="Бариста в чёрном фартуке готовит эспрессо за бетонной стойкой" loading="lazy">
         <figcaption>03 · БАР</figcaption>
       </figure>
       <figure class="ph ph-small">
-        <img src="images/pastry-v2.jpg" alt="Булка с корицей и чизкейк на чёрных тарелках рядом с жёлтым стаканом" loading="lazy">
+        <img src="images/showcase.jpg" alt="Тарт с фисташкой и банановый хлеб на чёрных тарелках рядом с оранжевой чашкой" loading="lazy">
         <figcaption>04 · ВИТРИНА</figcaption>
       </figure>
     </div>
@@ -533,28 +535,28 @@ button{font-family:var(--mono);cursor:pointer}
   <section class="section" id="contacts">
     <div class="section-head">
       <h2 class="section-title">Контакты</h2>
-      <span class="section-note">МЕТРО: КИТАЙ-ГОРОД</span>
+      <span class="section-note">МЕТРО: ПЛОЩАДЬ ВОССТАНИЯ</span>
     </div>
     <div class="contact-grid">
       <div>
         <div class="contact-block">
           <h3>Адрес</h3>
-          <p>Москва, Мясницкая ул., 13, стр. 2<br>вход со двора, ищите жёлтую дверь</p>
+          <p>Санкт-Петербург, Лиговский пр., 74<br>вход с угла, ищите оранжевую дверь</p>
           <h3 style="margin-top:24px">Часы работы</h3>
-          <p>пн–пт 8:00–22:00<br>сб–вс 10:00–22:00</p>
+          <p>пн–пт 9:00–21:00<br>сб–вс 10:00–22:00</p>
           <h3 style="margin-top:24px">Связь</h3>
-          <p><a href="tel:+74950001313">+7 495 000-13-13</a><br>
-          <a href="mailto:zdarova@kofebeton.ru">zdarova@kofebeton.ru</a></p>
+          <p><a href="tel:+78120002828">+7 812 000-28-28</a><br>
+          <a href="mailto:bar@dvavosem.ru">bar@dvavosem.ru</a></p>
         </div>
       </div>
-      <div class="map" role="img" aria-label="Схематичная карта: Мясницкая улица, 13 — вход со двора">
+      <div class="map" role="img" aria-label="Схематичная карта: Лиговский проспект, 74 — вход с угла">
         <div class="map-road h"></div>
         <div class="map-road v"></div>
-        <span class="map-label" style="top:8px;left:12px">МЯСНИЦКАЯ УЛ.</span>
-        <span class="map-label" style="bottom:12px;right:12px">ДВОР</span>
+        <span class="map-label" style="top:8px;left:12px">ЛИГОВСКИЙ ПР.</span>
+        <span class="map-label" style="bottom:12px;right:12px">УГОЛ</span>
         <div class="map-pin">
           <svg width="34" height="34" viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M12 0l2.6 9.4L24 12l-9.4 2.6L12 24l-2.6-9.4L0 12l9.4-2.6z" fill="#d9ff00" stroke="#000" stroke-width="1.2"/>
+            <path d="M12 0l2.6 9.4L24 12l-9.4 2.6L12 24l-2.6-9.4L0 12l9.4-2.6z" fill="#ff4d00" stroke="#000" stroke-width="1.2"/>
           </svg>
           <span>МЫ ТУТ</span>
         </div>
@@ -565,16 +567,16 @@ button{font-family:var(--mono);cursor:pointer}
   <!-- HOUSE RULES -->
   <section class="section" id="rules">
     <div class="section-head">
-      <h2 class="section-title">Правила дома</h2>
+      <h2 class="section-title">Правила стойки</h2>
       <span class="section-note">ЧТО ЕЩЁ НУЖНО ЗНАТЬ</span>
     </div>
     <div class="rules">
-      <div class="rule"><b>Wi-Fi</b><span>сеть KOFE.BETON, пароль — «espresso». Скорость средняя, как и задумано.</span></div>
-      <div class="rule"><b>Оплата</b><span>карта, наличные, СБП. Чаевые — наличными в жёлтую банку на баре.</span></div>
-      <div class="rule"><b>Ноутбуки</b><span>можно. Розетки — у окна и у колонны, приходите раньше конкурентов.</span></div>
-      <div class="rule"><b>Свой стакан</b><span>приносите — скидка 20 ₽. Крышку не забудьте, мы про неё тоже забудем.</span></div>
-      <div class="rule"><b>Собаки</b><span>welcome. У бара всегда стоит миска с водой.</span></div>
-      <div class="rule"><b>Столики</b><span>не бронируем. Занято — значит занято, приходите через час.</span></div>
+      <div class="rule"><b>Wi-Fi</b><span>сеть DVAVOSEM, пароль — «stoyka». Скорость нормальная, но мы за столбы не отвечаем.</span></div>
+      <div class="rule"><b>Оплата</b><span>карта, СБП, наличные. Сдачу бросаем в банку с оранжевой лентой — она на дело.</span></div>
+      <div class="rule"><b>Ноутбуки</b><span>до 18:00 — можно. После шести стойка для кофе, а не для созвонов.</span></div>
+      <div class="rule"><b>Свой стакан</b><span>приносите — скидка 30 ₽. Термокружку моем сами, быстро и без вопросов.</span></div>
+      <div class="rule"><b>Собаки</b><span>welcome. У стойки стоит миска, печенье — у бариста, гладить можно.</span></div>
+      <div class="rule"><b>Очередь</b><span>дабл пьётся за три минуты. Стоять долго не придётся — поэтому и работает.</span></div>
     </div>
   </section>
 
@@ -582,10 +584,10 @@ button{font-family:var(--mono);cursor:pointer}
 
 <footer class="footer">
   <div class="footer-inner">
-    <div class="footer-big" aria-hidden="true">Пей кофе</div>
+    <div class="footer-big" aria-hidden="true">Пей стоя</div>
     <div class="footer-row">
-      <span>&copy; 2026 КОФЕ&amp;БЕТОН</span>
-      <span>*на самом деле овсяное есть</span>
+      <span>&copy; 2026 ДВАВОСЕМЬ</span>
+      <span>*уют не завезли и не планируем</span>
       <a class="to-top" href="#top">Наверх &#8593;</a>
     </div>
   </div>
